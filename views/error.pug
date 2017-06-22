@@ -1,6 +1,8 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+	div(class="ticketingError")
+		div(class="tikectingErrorBox")
+			div(class="ticketingErrorBox-cover")
+				span(class="ticketingErrorBox-cover-span")
+					strong :(
