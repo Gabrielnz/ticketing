@@ -1,4 +1,111 @@
-body {
-	margin: 0;
-  font-family: 'Roboto', sans-serif;
+.ticketingHeader {
+  display: flex;
+  position: absolute;
+  top: 0;
+  height: 110px;
+  width: 100%;
+  background-color: #C1272D;
+  color: white;
+  font-size: 28px;
+}
+
+.ticketingHeader-adminBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 276px;
+  background-color: #333333;
+}
+
+.ticketingHeader-adminBox-avatar {
+  position: absolute;
+  left: 1%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.ticketingHeader-options {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 276px);
+}
+
+.ticketingHeader-options div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 5%;
+}
+
+.ticketingHeader-options-payment .fa-stack {
+  font-size: medium;
+}
+
+.ticketingHeader-options-payment .fa-usd {
+  color: #C1272D;
+}
+
+.ticketingHeader-options-dashboard {
+  border-bottom: 5px solid white;
+}
+
+.ticketingHeader-options-logout {
+  height: 65%;
+  border-left: 4px solid white;
+  position: absolute;
+  right: 5%;
+  padding-left: 5%;
+}
+
+.ticketingFooter {
+  position: absolute;
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 17px;
+}
+
+.ticketingFooter-codeWithLove {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 3%;
+}
+
+.ticketingFooter-codeWithLove i.fa-code {
+  color: #11a7a5;
+}
+
+.ticketingFooter-codeWithLove i.fa-heart {
+  color: #ff5959;
+}
+
+.ticketingFooter-codeWithLove-logo {
+  position: relative;
+  top: -10px;
+  width: 15%;
+}
+
+.ticketingFooter-contact {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 3%;
+}
+
+.ticketingFooter-contact .fa-stack {
+  font-size: x-large;
+}
+
+.ticketingFooter-contact .fa-phone,
+.ticketingFooter-contact .fa-envelope {
+  color: #333333;
 }
