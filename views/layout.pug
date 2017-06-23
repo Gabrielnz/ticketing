@@ -5,12 +5,13 @@ html.no-js(lang='es', dir='ltr')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		title= title
-		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700")
-		link(rel='stylesheet', href='/css/app.css')
-	
-	body
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700')
+		link(rel='stylesheet' href='css/foundation.min.css')
+		link(rel='stylesheet' href='css/font-awesome.min.css')
+		link(rel='stylesheet' href='css/index.css')
+		block styles
+	body(class=bodyBackground)
 		block content
-
 		script(src='js/vendor/jquery.js')
 		script(src='js/vendor/what-input.js')
 		script(src='js/vendor/foundation.js')

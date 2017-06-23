@@ -1,8 +1,25 @@
 extends layout
 
+block styles
+  link(rel='stylesheet' href='css/error.css')
+
 block content
-	div(class="ticketingError")
-		div(class="tikectingErrorBox")
-			div(class="ticketingErrorBox-cover")
-				span(class="ticketingErrorBox-cover-span")
-					strong :(
+  div(class="tikectingErrorBox")
+    div(class="ticketingErrorBox-cover")
+      span(class="ticketingErrorBox-cover-title")
+        strong :(
+      div(class="ticketingErrorBox-cover-footer")
+        i(class="fa fa-code fa-2x" aria-hidden="true") &nbsp;
+        span
+          strong with &nbsp;
+          i(class="fa fa-heart fa-lg" aria-hidden="true")
+    div(class="ticketingErrorBox-content")
+      div(class="ticketingErrorBox-content-container")
+        h1(class="ticketingErrorBox-content-title")
+          b 404
+        p(class="ticketingErrorBox-content-description")
+          b
+            | Parece que algo ha salido mal.
+            | Revisa tu conexión de internet o intenta nuevamente más tarde.
+      div(class="ticketingErrorBox-content-footer")
+        img(class="ticketingErrorBox-content-footer-logo" src='images/recaudia-logo.png')
