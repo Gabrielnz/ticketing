@@ -9,22 +9,27 @@ block content
       div(class='ticketingHeader-adminBox-avatar')
       span
         b Admin
-    div(class='ticketingHeader-options')
-      div(class='ticketingHeader-options-dashboard')
+    div(class='ticketingHeader-options tab')
+      button(class='ticketingHeader-options-dashboard tablinks active' onclick="openOption(event, 'ticketingContent-dashboard')")
         i(class='fa fa-bar-chart' aria-hidden='true') &nbsp;
         span Dashboard
-      div(class='ticketingHeader-options-events')
+      button(class='ticketingHeader-options-events tablinks' onclick="openOption(event, 'ticketingContent-events')")
         i(class='fa fa-ticket' aria-hidden='true') &nbsp;
         span Eventos
-      div(class='ticketingHeader-options-payment')
+      button(class='ticketingHeader-options-payment tablinks' onclick="openOption(event, 'ticketingContent-payment')")
         span(class='fa-stack')
           i(class='fa fa-circle fa-stack-2x')
           i(class='fa fa-usd fa-stack-1x' aria-hidden='true')
         | &nbsp;
         span Pagos
-      div(class='ticketingHeader-options-logout')
+      button(class='ticketingHeader-options-logout')
         | Log Out &nbsp;
         i(class='fa fa-sign-out fa-lg' aria-hidden='true')
+
+  section(class='ticketingContent')
+    div(class='ticketingContent-dashboard tabcontent') contenido del dashboard
+    div(class='ticketingContent-events tabcontent') contenido de los eventos
+    div(class='ticketingContent-payment tabcontent') contenido de los eventos
 
   footer(class='ticketingFooter')
     div(class='ticketingFooter-codeWithLove')

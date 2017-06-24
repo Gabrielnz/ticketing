@@ -1,9 +1,7 @@
 .ticketingHeader {
   display: flex;
-  position: absolute;
-  top: 0;
+  position: relative;
   height: 110px;
-  width: 100%;
   background-color: #C1272D;
   color: white;
   font-size: 28px;
@@ -33,11 +31,13 @@
   width: calc(100% - 276px);
 }
 
-.ticketingHeader-options div {
-  display: flex;
-  align-items: center;
+.ticketingHeader-options button {
+  color: white;
   cursor: pointer;
   margin-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0;
 }
 
 .ticketingHeader-options-payment .fa-stack {
@@ -48,16 +48,25 @@
   color: #C1272D;
 }
 
-.ticketingHeader-options-dashboard {
-  border-bottom: 5px solid white;
-}
-
 .ticketingHeader-options-logout {
   height: 65%;
   border-left: 4px solid white;
   position: absolute;
   right: 5%;
   padding-left: 5%;
+}
+
+div.tab button.active {
+  border-bottom: 5px solid white;
+  margin-bottom: -5px;
+}
+
+section.ticketingContent div.tabcontent {
+  display: none;
+}
+
+.ticketingContent-dashboard {
+  display: block;
 }
 
 .ticketingFooter {
