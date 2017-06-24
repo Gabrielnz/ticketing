@@ -1,8 +1,23 @@
+table {
+  width: 100%;
+}
+
+table thead {
+  display: block;
+  height: 50px;
+}
+
+table tbody {
+  display: block;
+  overflow-y: auto;
+  /*La altura de la caja menos la altura de su header, menos la altura del header de la tabla, menos un par de pixeles mas*/
+  height: 244px;
+  overflow-x: hidden;
+}
 
 /*Header*/
 .ticketingHeader {
   display: flex;
-  position: relative;
   height: 110px;
   background-color: #C1272D;
   color: white;
@@ -67,10 +82,14 @@ div.tab button.active {
 
 .ticketingContent-events {
   display: none;
+  /*La altura disponible del dispositivo menos la altura del header y el footer*/
+  height: calc(100vh - 180px);
 }
 
 .ticketingContent-payment {
   display: none;
+  /*La altura disponible del dispositivo menos la altura del header y el footer*/
+  height: calc(100vh - 180px);
 }
 
 .ticketingContent-title {
@@ -87,8 +106,8 @@ div.tab button.active {
 
 .ticketingContent-dashboard-cardContainer {
   display: flex;
-  justify-content: space-around;
-  margin-top: 25px;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .ticketingContent-card {
@@ -98,6 +117,7 @@ div.tab button.active {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  margin: 13px;
   padding: 20px;
   box-shadow: 0px 4px 20px 0px #CCCCCC, 0 6px 20px 0 #CCCCCC;
 }
@@ -132,12 +152,34 @@ div.tab button.active {
   color: mediumpurple;
 }
 
+.ticketingContent-dashboard-boxContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.ticketingContent-dashboard-box {
+  width: 1216px;
+  height: 379px;
+  box-shadow: 0px 4px 20px 0px #CCCCCC, 0 6px 20px 0 #CCCCCC;
+}
+
+.ticketingContent-dashboard-boxHeader {
+  height: 82px;
+  background-color: #333333;
+}
+
+.ticketingContent-dashboard-boxHeader-title {
+  font-size: 35px;
+  color: white;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
 /*Footer*/
 .ticketingFooter {
-  position: absolute;
-  bottom: 0;
-  height: 90px;
-  width: 100%;
+  height: 70px;
   background-color: #333333;
   display: flex;
   align-items: center;
