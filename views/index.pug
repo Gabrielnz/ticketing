@@ -28,11 +28,10 @@ block content
 
   section(class='ticketingContent')
     div(id='dashboard' class='ticketingContent-dashboard tabcontent')
-      div(class='expanded row')
-        div(class='column small-12')
-          h1(class='ticketingContent-title')
-            b Dashboard
-          hr
+      div(class='ticketingContent-dashboard-header')
+        h1(class='ticketingContent-title ')
+          b Dashboard
+      hr
       div(class='expanded row')
         div(class='column ticketingContent-dashboard-cardContainer')
           div(class='ticketingContent-card sold-tickets-card')
@@ -74,37 +73,133 @@ block content
                   th(class='dashboard-table-amount-header') Dinero recaudado
               tbody
                 tr
-                  td(class='dashboard-table-eventTitle') 438204823904890238903890284908402398490
+                  td(class='dashboard-table-eventTitle')
+                    b 438204823904890238903890284908402398490
                   td(class='dashboard-table-date') 27/06/17
                   td(class='dashboard-table-total') 100/500
                   td(class='dashboard-table-amount')
                     b 150.000 MXN
                 tr
-                  td(class='dashboard-table-eventTitle') 438204823904890238903890284908402398490
+                  td(class='dashboard-table-eventTitle')
+                    b 438204823904890238903890284908402398490
                   td(class='dashboard-table-date') 27/06/17
                   td(class='dashboard-table-total') 100/500
                   td(class='dashboard-table-amount')
                     b 150.000 MXN
                 tr
-                  td(class='dashboard-table-eventTitle') 438204823904890238903890284908402398490
+                  td(class='dashboard-table-eventTitle')
+                    b 438204823904890238903890284908402398490
                   td(class='dashboard-table-date') 27/06/17
                   td(class='dashboard-table-total') 100/500
                   td(class='dashboard-table-amount')
                     b 150.000 MXN
                 tr
-                  td(class='dashboard-table-eventTitle') 438204823904890238903890284908402398490
+                  td(class='dashboard-table-eventTitle')
+                    b 438204823904890238903890284908402398490
                   td(class='dashboard-table-date') 27/06/17
                   td(class='dashboard-table-total') 100/500
                   td(class='dashboard-table-amount')
                     b 150.000 MXN
                 tr
-                  td(class='dashboard-table-eventTitle') 438204823904890238903890284908402398490
+                  td(class='dashboard-table-eventTitle')
+                    b 438204823904890238903890284908402398490
                   td(class='dashboard-table-date') 27/06/17
                   td(class='dashboard-table-total') 100/500
                   td(class='dashboard-table-amount')
                     b 150.000 MXN
 
-    div(id='events' class='ticketingContent-events tabcontent') contenido de los eventos
+    div(id='events' class='ticketingContent-events tabcontent')
+      div(class='ticketingContent-events-header')
+        h1(class='ticketingContent-title')
+          b Eventos
+        div(class='ticketingContent-events-buttonsContainer')
+          button(class='ticketingContent-events-filterButton')
+            span
+              b Filtrar
+            i(class='fa fa-caret-down fa-lg' aria-hidden='true')
+          button(class='ticketingContent-events-addEventButton')
+            span
+              b Agregar evento
+      hr
+      div(class='expanded row')
+        div(class='column ticketingContent-events-cardContainer')
+          div(class='ticketingContent-events-card')
+            img(class='ticketingContent-events-card-image' src='images/event-image.png')
+            div(class='ticketingContent-events-card-data')
+              div(class='ticketingContent-events-card-status-font')
+                i(class='fa fa-eye fa-lg' aria-hidden='true')
+              span(class='ticketingContent-events-card-title')
+                b 438204823904890232323055 3890284908 402398490
+              span(class='ticketingContent-events-card-date')
+                i(class='fa fa-calendar fa-lg' aria-hidden='true')
+                | &nbsp; &nbsp; 27/06/17
+              span(class='ticketingContent-events-card-seats')
+                i(class='fa fa-ticket fa-lg' aria-hidden='true')
+                | &nbsp; 100/500
+              div(class='ticketingContent-events-card-amount')
+                span
+                  b 150.000 MXN
+              div(class='ticketingContent-events-card-status status-inProgress')
+                span
+                  b EN CURSO
+          div(class='ticketingContent-events-card')
+            img(class='ticketingContent-events-card-image' src='images/event-image.png')
+            div(class='ticketingContent-events-card-data')
+              div(class='ticketingContent-events-card-status-font')
+                i(class='fa fa-eye fa-lg' aria-hidden='true')
+              span(class='ticketingContent-events-card-title')
+                b 438204823904890232323055 3890284908 402398490
+              span(class='ticketingContent-events-card-date')
+                i(class='fa fa-calendar fa-lg' aria-hidden='true')
+                | &nbsp; &nbsp; 27/06/17
+              span(class='ticketingContent-events-card-seats')
+                i(class='fa fa-ticket fa-lg' aria-hidden='true')
+                | &nbsp; 100/500
+              div(class='ticketingContent-events-card-amount')
+                span
+                  b 150.000 MXN
+              div(class='ticketingContent-events-card-status status-inProgress')
+                span
+                  b EN CURSO
+          div(class='ticketingContent-events-card')
+            img(class='ticketingContent-events-card-image' src='images/event-image.png')
+            div(class='ticketingContent-events-card-data')
+              div(class='ticketingContent-events-card-status-font')
+                i(class='fa fa-eye fa-lg' aria-hidden='true')
+              span(class='ticketingContent-events-card-title')
+                b 438204823904890232323055 3890284908 402398490
+              span(class='ticketingContent-events-card-date')
+                i(class='fa fa-calendar fa-lg' aria-hidden='true')
+                | &nbsp; &nbsp; 27/06/17
+              span(class='ticketingContent-events-card-seats')
+                i(class='fa fa-ticket fa-lg' aria-hidden='true')
+                | &nbsp; 100/500
+              div(class='ticketingContent-events-card-amount')
+                span
+                  b 150.000 MXN
+              div(class='ticketingContent-events-card-status status-done')
+                span
+                  b REALIZADO
+          div(class='ticketingContent-events-card')
+            img(class='ticketingContent-events-card-image' src='images/event-image.png')
+            div(class='ticketingContent-events-card-data')
+              div(class='ticketingContent-events-card-status-font')
+                i(class='fa fa-eye fa-lg' aria-hidden='true')
+              span(class='ticketingContent-events-card-title')
+                b 438204823904890232323055 3890284908 402398490
+              span(class='ticketingContent-events-card-date')
+                i(class='fa fa-calendar fa-lg' aria-hidden='true')
+                | &nbsp; &nbsp; 27/06/17
+              span(class='ticketingContent-events-card-seats')
+                i(class='fa fa-ticket fa-lg' aria-hidden='true')
+                | &nbsp; 100/500
+              div(class='ticketingContent-events-card-amount')
+                span
+                  b 150.000 MXN
+              div(class='ticketingContent-events-card-status status-done')
+                span
+                  b REALIZADO
+
     div(id='payment' class='ticketingContent-payment tabcontent') contenido de los pagos
 
   footer(class='ticketingFooter')
@@ -125,3 +220,5 @@ block content
           i(class='fa fa-circle fa-stack-2x')
           i(class='fa fa-envelope fa-stack-1x' aria-hidden='true')
 
+block scripts
+  script(src='js/holder.js')

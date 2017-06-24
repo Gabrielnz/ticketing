@@ -75,17 +75,27 @@ div.tab button.active {
   height: calc(100vh - 180px);
 }
 
+.ticketingContent-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
 .ticketingContent-title {
   font-size: 51px;
   color: #333333;
 }
 
-.ticketingContent-dashboard hr {
-  margin: 0;
+.ticketingContent hr {
+  margin: 0 3%;
   max-width: none;
   color: #333333;
   border-bottom: 1px solid #333333;
 }
+
+/*Dashboard*/
 
 .ticketingContent-dashboard-cardContainer {
   display: flex;
@@ -188,6 +198,123 @@ div.tab button.active {
 .dashboard-table td.dashboard-table-amount {
   color: limegreen;
   text-align: right;
+}
+
+/*Events*/
+
+.ticketingContent-events-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.ticketingContent-events-buttonsContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 500px;
+  font-size: 25px;
+}
+
+.ticketingContent-events-filterButton {
+  background-color: #C1272D;
+  width: 180px;
+  height: 39px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 6%;
+  padding-right: 6%;
+  cursor: pointer;
+}
+
+.ticketingContent-events-addEventButton {
+  background-color: #C1272D;
+  width: 242px;
+  height: 39px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.ticketingContent-events-cardContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ticketingContent-events-card {
+  width: 283px;
+  height: 496px;
+  margin: 13px;
+  box-shadow: 0px 4px 20px 0px #CCCCCC, 0 6px 20px 0 #CCCCCC;
+}
+
+.ticketingContent-events-card i {
+  color: #B3B3B3;
+}
+
+.ticketingContent-events-card-status-font i {
+  font-size: 40px;
+}
+
+.ticketingContent-events-card-date i,
+.ticketingContent-events-card-seats i {
+  font-size: 25px;
+}
+
+.ticketingContent-events-card-data {
+  display: flex;
+  height: 331px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+.ticketingContent-events-card-status-font {
+  text-align: right;
+}
+
+.ticketingContent-events-card-title {
+  font-size: 18px;
+}
+
+.ticketingContent-events-card-date,
+.ticketingContent-events-card-seats {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+}
+
+.ticketingContent-events-card-amount {
+  text-align: center;
+  font-size: 34px;
+  color: limegreen;
+}
+
+.ticketingContent-events-card-status {
+  width: 283px;
+  height: 64px;
+  margin: -5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.status-inProgress {
+  background-color: #C1272D;
+  color: white;
+}
+
+.status-done {
+  background-color: #333333;
+  color: white;
 }
 
 /*Footer*/
