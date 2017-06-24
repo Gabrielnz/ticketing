@@ -10,13 +10,13 @@ block content
       span
         b Admin
     div(class='ticketingHeader-options tab')
-      button(class='ticketingHeader-options-dashboard tablinks active' onclick="openOption(event, 'ticketingContent-dashboard')")
+      button(class='ticketingHeader-options-dashboard tablinks active' onclick="openOption(event, 'dashboard')")
         i(class='fa fa-bar-chart' aria-hidden='true') &nbsp;
         span Dashboard
-      button(class='ticketingHeader-options-events tablinks' onclick="openOption(event, 'ticketingContent-events')")
+      button(class='ticketingHeader-options-events tablinks' onclick="openOption(event, 'events')")
         i(class='fa fa-ticket' aria-hidden='true') &nbsp;
         span Eventos
-      button(class='ticketingHeader-options-payment tablinks' onclick="openOption(event, 'ticketingContent-payment')")
+      button(class='ticketingHeader-options-payment tablinks' onclick="openOption(event, 'payment')")
         span(class='fa-stack')
           i(class='fa fa-circle fa-stack-2x')
           i(class='fa fa-usd fa-stack-1x' aria-hidden='true')
@@ -27,9 +27,41 @@ block content
         i(class='fa fa-sign-out fa-lg' aria-hidden='true')
 
   section(class='ticketingContent')
-    div(class='ticketingContent-dashboard tabcontent') contenido del dashboard
-    div(class='ticketingContent-events tabcontent') contenido de los eventos
-    div(class='ticketingContent-payment tabcontent') contenido de los eventos
+    div(id='dashboard' class='ticketingContent-dashboard tabcontent')
+      div(class='expanded row')
+        div(class='column small-12')
+          h1(class='ticketingContent-title')
+            b Dashboard
+          hr
+      div(class='expanded row')
+        div(class='column ticketingContent-dashboard-cardContainer')
+          div(class='ticketingContent-card sold-tickets-card')
+            i(class='fa fa-ticket fa-lg' aria-hidden='true')
+            label(class='ticketingContent-card-data')
+              b Boletos vendidos
+            label(class='ticketingContent-card-dataNumber')
+              b 300
+          div(class='ticketingContent-card raised-money-card')
+            i(class='fa fa-usd fa-lg' aria-hidden='true')
+            label(class='ticketingContent-card-data')
+              b Dinero recaudado
+            label(class='ticketingContent-card-dataNumber')
+              b 600.000 MXN
+          div(class='ticketingContent-card events-held-card')
+            i(class='fa fa-calendar fa-lg' aria-hidden='true')
+            label(class='ticketingContent-card-data')
+              b Eventos realizados
+            label(class='ticketingContent-card-dataNumber')
+              b 5
+          div(class='ticketingContent-card sold-tickets-percentage-card')
+            i(class='fa fa-percent fa-lg' aria-hidden='true')
+            label(class='ticketingContent-card-data')
+              b % boletos vendidos
+            label(class='ticketingContent-card-dataNumber')
+              b 75%
+
+    div(id='events' class='ticketingContent-events tabcontent') contenido de los eventos
+    div(id='payment' class='ticketingContent-payment tabcontent') contenido de los pagos
 
   footer(class='ticketingFooter')
     div(class='ticketingFooter-codeWithLove')

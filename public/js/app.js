@@ -18,6 +18,6 @@ function openOption(ev, optionName) {
   })
 
   // Muestra el contenido del tab seleccionado, y agrega la clase activa al tab que corresponde
-  // document.getElementsByClassName(optionName).style.display = 'block'
+  document.getElementById(optionName).style.display = 'block'
   ev.currentTarget.className += ' active'
 }
