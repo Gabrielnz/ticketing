@@ -105,6 +105,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 20px 0;
 }
 
 .addEvent-content-form-left {
@@ -162,7 +163,12 @@
   width: 100%;
 }
 
+.addEvent-content-formContainer span.date-input-label {
+  transition: 0.3s;
+}
+
 .addEvent-content-formContainer input:focus,
+.addEvent-content-formContainer input:focus + span.date-input-label,
 .addEvent-content-formContainer textarea:focus {
   box-shadow: none;
   background-color: #FFBFC2;
@@ -176,9 +182,9 @@
 }
 
 .addEvent-content-formContainer span.date-input-label {
-  background-color: #E6E6E6;
+  /*background-color: #E6E6E6;*/
   border-radius: 0 10px 10px 0;
-  box-shadow: none;
+  /*box-shadow: none;*/
   border: 1px solid transparent;
   cursor: pointer;
   color: #606060;
@@ -200,4 +206,97 @@ textarea.description-textarea {
   width: 563px;
   height: 416px;
   border-radius: 0 0 15px 15px;
+}
+
+/*Social form*/
+
+input.events-social-input {
+  /*501 pixeles menos el span del icono*/
+  width: 441px;
+  height: 42px;
+  border-radius: 0 10px 10px 0;
+}
+
+.social-form div.input-group span {
+  font-size: 30px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid transparent;
+}
+
+.social-form div.input-group span.label-email {
+  background-color: #006A3F;
+}
+
+.social-form div.input-group span.label-facebook {
+  background-color: #4C76BE;
+}
+
+.social-form div.input-group span.label-instagram {
+  background: radial-gradient(circle at 21% 100%, #D92E7F 62%, #9B36B7 85%);
+}
+
+.social-form div.input-group span.label-twitter {
+  background-color: #00C7FF;
+}
+
+/*Switch del formulario*/
+
+.addEvent-content-form-switchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addEvent-content-form-switchContainer span.switchDescription {
+  font-size: 14px;
+}
+
+div.switch.medium {
+  margin-bottom: 0;
+}
+
+label.switch-paddle {
+  background-color: white;
+  border-radius: 30px;
+  border: 1px solid #B3B3B3;
+}
+
+input:checked~.switch-paddle {
+  background-color: white;
+}
+
+span.switch-active {
+  color: #B3B3B3;
+  left: 20%;
+}
+
+span.switch-inactive {
+  color: #B3B3B3;
+}
+
+.switch.medium .switch-paddle:after {
+  border-radius: 50%;
+  background-color: #C1272D;
+}
+
+/*Boton de guardar*/
+.addEvent-content-form-saveContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.addEvent-content-form-saveContainer button {
+  background-color: #C1272D;
+  width: 222px;
+  height: 57px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 37px;
 }
