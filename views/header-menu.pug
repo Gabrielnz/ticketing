@@ -1,0 +1,21 @@
+header(class='ticketingHeader')
+  div(class='ticketingHeader-adminBox')
+    div(class='ticketingHeader-adminBox-avatar')
+    span
+      b Admin
+  div(class='ticketingHeader-options tab')
+    button(class='ticketingHeader-options-dashboard tablinks active' onclick="openOption(event, 'dashboard')")
+      i(class='fa fa-bar-chart' aria-hidden='true') &nbsp;
+      span Dashboard
+    button(class='ticketingHeader-options-events tablinks' onclick="openOption(event, 'events')")
+      i(class='fa fa-ticket' aria-hidden='true') &nbsp;
+      span Eventos
+    button(class='ticketingHeader-options-payment tablinks')
+      span(class='fa-stack')
+        i(class='fa fa-circle fa-stack-2x')
+        i(class='fa fa-usd fa-stack-1x' aria-hidden='true')
+      | &nbsp;
+      span Pagos
+    button(class='ticketingHeader-options-logout')
+      | Log Out &nbsp;
+      i(class='fa fa-sign-out fa-lg' aria-hidden='true')

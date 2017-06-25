@@ -1,0 +1,80 @@
+include header-menu.pug
+
+div(class='addEvent-content')
+  div(class='addEvent-content-banner')
+    i(class='fa fa-picture-o fa-inverse' aria-hidden='true')
+    span
+      b Haga "click" aquí para añadir una imagen
+  span(class='addEvent-content-bannerDescription')
+    | (Tamaño banner 1101px X 529px)
+
+hr
+
+div(class='addEvent-content-formRequired')
+  | Todos los campos marcados con
+  span(class='asterisk') &nbsp;*&nbsp;
+  | son obligatorios
+
+div(class='addEvent-content-formContainer')
+    div(class='addEvent-content-form-left')
+      div(class='addEvent-content-form-inputDescription')
+        h3
+          b
+            span(class='asterisk') *&nbsp;
+            | Título
+        span (máximo 40 carácteres)
+      input(type='text' maxlength='40')
+
+      div(class='addEvent-content-form-inputDescription')
+        h3
+          b
+            span(class='asterisk') *&nbsp;
+            | Subtítulo
+        span (máximo 75 carácteres)
+      textarea(maxlength='75' rows='2')
+
+      div(class='addEvent-content-form-inputDescription')
+        h3
+          b
+            span(class='asterisk') *&nbsp;
+            | Lugar
+        span (máximo 50 carácteres)
+      input(type='text' maxlength='50')
+
+      div(class='addEvent-content-form-inputDescription')
+        h3
+          b
+            span(class='asterisk') *&nbsp;
+            | Dirección
+        span (máximo 50 carácteres)
+      input(type='text' maxlength='50')
+
+      div(class='date-datetime-inputs')
+        div
+          div(class='addEvent-content-form-smallInputDescription')
+            h3
+              b
+                span(class='asterisk') *&nbsp;
+                | Fecha
+          div(class='input-group')
+            input(class='input-group-field small-input date-input' type='text')
+            span(class='input-group-label date-input-label')
+              i(class='fa fa-calendar fa-lg' aria-hidden='true')
+
+        div(class='time-input-container')
+          div(class='addEvent-content-form-smallInputDescription')
+            h3
+              b
+                span(class='asterisk') *&nbsp;
+                | Hora
+          input(class='small-input' type='text')
+
+    div(class='addEvent-content-form-right')
+      div(class='addEvent-content-form-inputDescription')
+        h3
+          b
+            span(class='asterisk') *&nbsp;
+            | Descripción
+        span (máximo 1300 carácteres)
+      div(class='description-textarea-header')
+      textarea(class='description-textarea' maxlength='1300')
