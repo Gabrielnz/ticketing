@@ -41,7 +41,10 @@
   margin-bottom: -5px;
 }
 
-.addEvent-header-goBack button {
+.addEvent-header-goBack a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #C1272D;
   width: 151px;
   height: 39px;
@@ -49,6 +52,7 @@
   color: white;
   cursor: pointer;
   font-size: 25px;
+  text-decoration: none;
 }
 
 /*Content*/

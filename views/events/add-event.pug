@@ -1,0 +1,144 @@
+extends ../layout
+
+block styles
+  link(rel='stylesheet' href='/css/header-menu.css')
+  link(rel='stylesheet' href='/css/add-event.css')
+  link(rel='stylesheet' href='/css/footer.css')
+
+block content
+  
+  include ../header-menu.pug
+
+  include header-menu.pug
+
+  div(class='addEvent-content')
+    div(class='addEvent-content-banner')
+      i(class='fa fa-picture-o fa-inverse' aria-hidden='true')
+      span
+        b Haga "click" aquí para añadir una imagen
+    span(class='addEvent-content-bannerDescription')
+      | (Tamaño banner 1101px X 529px)
+
+  hr
+
+  div(class='addEvent-content-formRequired')
+    | Todos los campos marcados con
+    span(class='asterisk') &nbsp;*&nbsp;
+    | son obligatorios
+
+  div(class='addEvent-content-formContainer')
+      div(class='addEvent-content-form-left')
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b
+              span(class='asterisk') *&nbsp;
+              | Título
+          span (máximo 40 carácteres)
+        input(type='text' maxlength='40')
+
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b
+              span(class='asterisk') *&nbsp;
+              | Subtítulo
+          span (máximo 75 carácteres)
+        textarea(maxlength='75' rows='2')
+
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b
+              span(class='asterisk') *&nbsp;
+              | Lugar
+          span (máximo 50 carácteres)
+        input(type='text' maxlength='50')
+
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b
+              span(class='asterisk') *&nbsp;
+              | Dirección
+          span (máximo 50 carácteres)
+        input(type='text' maxlength='50')
+
+        div(class='date-datetime-inputs')
+          div
+            div(class='addEvent-content-form-smallInputDescription')
+              h3
+                b
+                  span(class='asterisk') *&nbsp;
+                  | Fecha
+            div(class='input-group')
+              input(class='input-group-field small-input date-input' type='text')
+              span(class='input-group-label date-input-label')
+                i(class='fa fa-calendar fa-lg' aria-hidden='true')
+
+          div(class='time-input-container')
+            div(class='addEvent-content-form-smallInputDescription')
+              h3
+                b
+                  span(class='asterisk') *&nbsp;
+                  | Hora
+            input(class='small-input' type='text')
+
+      div(class='addEvent-content-form-right')
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b
+              span(class='asterisk') *&nbsp;
+              | Descripción
+          span (máximo 1300 carácteres)
+        div(class='description-textarea-header')
+        textarea(class='description-textarea' maxlength='1300')
+
+  hr
+  div(class='addEvent-content-formContainer social-form')
+    div(class='addEvent-content-form-left')
+        
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b Email
+        div(class='input-group')
+          span(class='input-group-label label-email')
+            i(class='fa fa-envelope fa-inverse' aria-hidden='true')
+          input(class='input-group-field events-social-input' type='text')
+
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b Facebook
+        div(class='input-group')
+          span(class='input-group-label label-facebook')
+            i(class='fa fa-facebook fa-inverse' aria-hidden='true')
+          input(class='input-group-field events-social-input' type='text')
+
+    div(class='addEvent-content-form-right')
+        
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b Instagram
+        div(class='input-group')
+          span(class='input-group-label label-instagram')
+            i(class='fa fa-instagram fa-inverse' aria-hidden='true')
+          input(class='input-group-field events-social-input' type='text')
+
+        div(class='addEvent-content-form-inputDescription')
+          h3
+            b Twitter
+        div(class='input-group')
+          span(class='input-group-label label-twitter')
+            i(class='fa fa-twitter fa-inverse' aria-hidden='true')
+          input(class='input-group-field events-social-input' type='text')
+
+  div(class='addEvent-content-form-switchContainer')
+    span(class='switchDescription') ¿Desea mostrar este evento en plataforma?
+    | &nbsp; &nbsp;
+    div(class='switch medium')
+      input(id='yes-no' class='switch-input' type='checkbox', name='formSwitch')
+      label(class='switch-paddle' for='yes-no')
+        span(class='switch-active' aria-hidden='true') Sí
+        span(class='switch-inactive' aria-hidden='true') No
+
+  div(class='addEvent-content-form-saveContainer')
+    button(class='addEvent-form-saveButton')
+      span
+        b Guardar
+  include ../footer.pug

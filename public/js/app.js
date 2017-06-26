@@ -1,6 +1,6 @@
 $(document).foundation()
 
-function toggleContent(contentId) {
+/* function toggleContent(contentId) {
   // Esconde todos los elementos con la clase content
   const content = document.querySelectorAll('.content')
   
@@ -31,4 +31,4 @@ function openOption(ev, contentId) {
 // Funcion que es invocada al seleccionar la opcion de agregar evento
 function addEvent(ev, contentId) {
   toggleContent(contentId)
-}
+}*/

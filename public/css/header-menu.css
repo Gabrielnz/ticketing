@@ -1,0 +1,62 @@
+/*Header*/
+.ticketingHeader {
+  display: flex;
+  height: 110px;
+  background-color: #C1272D;
+  color: white;
+  font-size: 28px;
+}
+
+.ticketingHeader-adminBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 276px;
+  background-color: #333333;
+}
+
+.ticketingHeader-adminBox-avatar {
+  position: absolute;
+  left: 1%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.ticketingHeader-options {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 276px);
+}
+
+.ticketingHeader-options a {
+  color: white;
+  cursor: pointer;
+  margin-left: 4%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.ticketingHeader-options-payment .fa-stack {
+  font-size: medium;
+}
+
+.ticketingHeader-options-payment .fa-usd {
+  color: #C1272D;
+}
+
+.ticketingHeader-options-logout {
+  height: 65%;
+  border-left: 4px solid white;
+  position: absolute;
+  right: 4%;
+  padding-left: 2%;
+}
+
+div.tab a.active {
+  border-bottom: 5px solid white;
+  margin-bottom: -5px;
+}
