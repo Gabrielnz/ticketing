@@ -7,7 +7,7 @@
 
 .ticketingContent-title {
   font-size: 51px;
-  color: #333333;
+  color: #606060;
 }
 
 .ticketingContent-events-header {
@@ -66,7 +66,7 @@ a.ticketingContent-events-addEvent {
   width: 283px;
   height: 496px;
   margin: 13px;
-  box-shadow: 0px 4px 20px 0px #CCCCCC, 0 6px 20px 0 #CCCCCC;
+  box-shadow: 5px 0px 50px 0px #CCCCCC, 0 6px 20px 0 #CCCCCC;
 }
 
 .ticketingContent-events-card i {

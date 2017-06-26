@@ -1,3 +1,5 @@
+/*Error*/
+
 .ticketingError {
   margin: 3%;
   display: flex;
@@ -6,7 +8,7 @@
   background: linear-gradient(to right, #3F000C, #550009, #7F0027, #94003A);
 }
 
-.tikectingErrorBox {
+.ticketingErrorBox {
   display: flex;
   width: 949px;
   height: 718px;
@@ -84,4 +86,70 @@
 
 .ticketingErrorBox-content-footer-logo {
   width: 25%;
+}
+
+/*Para móviles con un ancho de máximo 650px*/
+@media screen and (max-width: 650px) {
+  html, body {
+    height: 100%;
+  }
+
+  .ticketingError {
+    margin: 0;
+  }
+
+  .ticketingErrorBox {
+    flex-direction: column;
+    width: 90%;
+    height: 75%;
+  }
+
+  .ticketingErrorBox-cover {
+    width: 100%;
+    height: 60%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .ticketingErrorBox-cover-title {
+    position: static;
+    font-size: 120px;
+    margin-left: 15%;
+  }
+
+  .ticketingErrorBox-cover-footer {
+    right: 5%;
+    font-size: 15px;
+  }
+
+  .ticketingErrorBox-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .ticketingErrorBox-content-container {
+      text-align: center;
+      top: 0;
+  }
+
+  .ticketingErrorBox-content-container h1 {
+      font-size: 120px;
+      margin-bottom: 10%;
+  }
+
+  .ticketingErrorBox-content-container p {
+    font-size: 17px
+  }
+
+  .ticketingErrorBox-content-footer {
+    justify-content: center;
+    right: 0;
+  }
+
+  .ticketingErrorBox-content-footer img {
+    width: 40%;
+  }
 }
