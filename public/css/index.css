@@ -34,7 +34,7 @@
 .ticketingHeader-options button {
   color: white;
   cursor: pointer;
-  margin-left: 5%;
+  margin-left: 4%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -51,8 +51,8 @@
   height: 65%;
   border-left: 4px solid white;
   position: absolute;
-  right: 5%;
-  padding-left: 5%;
+  right: 4%;
+  padding-left: 2%;
 }
 
 div.tab button.active {
@@ -65,13 +65,13 @@ div.tab button.active {
 .ticketingContent-events {
   display: none;
   /*La altura disponible del dispositivo menos la altura del header y el footer*/
-  height: calc(100vh - 180px);
+  min-height: calc(100vh - 185px);
 }
 
 .ticketingContent-payment {
   display: none;
   /*La altura disponible del dispositivo menos la altura del header y el footer*/
-  height: calc(100vh - 180px);
+  min-height: calc(100vh - 185px);
 }
 
 .ticketingContent-dashboard-header {
@@ -93,7 +93,8 @@ div.tab button.active {
 .ticketingContent-dashboard-cardContainer {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .ticketingContent-card {
@@ -239,7 +240,8 @@ div.tab button.active {
 .ticketingContent-events-cardContainer {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .ticketingContent-events-card {
@@ -313,7 +315,7 @@ div.tab button.active {
 
 /*Footer*/
 .ticketingFooter {
-  height: 70px;
+  height: 75px;
   background-color: #333333;
   display: flex;
   align-items: center;
