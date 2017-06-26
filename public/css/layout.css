@@ -17,8 +17,29 @@ hr {
   border-bottom: 1px solid #333333;
 }
 
-/*Para móviles con un ancho de máximo 650px*/
-@media screen and (max-width: 650px) {
+/*Placeholder para el modo responsivo*/
+
+.mobile-responsive-placeholder {
+  height: calc(100vh - 70px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+
+.mobile-responsive-placeholder i {
+  font-size: 40em;
+  color: #B3B3B3;
+}
+
+.mobile-responsive-placeholder span {
+  font-size: 20px;
+  color: #606060;
+  position: absolute;
+}
+
+/*Para móviles*/
+@media screen and (max-width: 39.9375em) {
   html, body {
     height: 100%;
   }

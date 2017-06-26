@@ -46,3 +46,10 @@
 .ticketingFooter-contact .fa-envelope {
   color: #333333;
 }
+
+/*Para móviles*/
+@media screen and (max-width: 39.9375em) {
+  .ticketingFooter {
+    display: none;
+  }
+}

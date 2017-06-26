@@ -16,6 +16,7 @@ block content
         h1(class='ticketingContent-title')
           b Dashboard
       hr
+
       div(class='ticketingContent-dashboard-cardContainer')
         div(class='ticketingContent-card sold-tickets-card')
           i(class='fa fa-ticket fa-lg' aria-hidden='true')
@@ -41,13 +42,14 @@ block content
             b % boletos vendidos
           label(class='ticketingContent-card-dataNumber')
             b 75%
+
       div(class='ticketingContent-dashboard-boxContainer')
         div(class='ticketingContent-dashboard-box')
           div(class='ticketingContent-dashboard-boxHeader')
             h3(class='ticketingContent-dashboard-boxHeader-title')
               b Eventos activos
           div(class='ticketingContent-dashboard-boxTableContainer')
-            table(class='dashboard-table unstriped')
+            table(class='stack dashboard-table unstriped')
               thead
                 tr
                   th(class='dashboard-table-eventTitle-header') Nombre de evento
@@ -90,5 +92,8 @@ block content
                   td(class='dashboard-table-total') 100/500
                   td(class='dashboard-table-amount')
                     b 150.000 MXN
+
+    include mobile-placeholder.pug
+
 
   include footer.pug

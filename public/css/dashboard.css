@@ -117,3 +117,16 @@
   color: limegreen;
   text-align: right;
 }
+
+/*Para móviles*/
+@media screen and (max-width: 39.9375em) {
+  
+  div.ticketingContent-dashboard.content {
+    display: none;
+  }
+
+  .mobile-responsive-placeholder {
+    display: flex;
+  }
+
+}
