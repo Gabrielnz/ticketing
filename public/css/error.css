@@ -90,9 +90,6 @@
 
 /*Para móviles con un ancho de máximo 650px*/
 @media screen and (max-width: 650px) {
-  html, body {
-    height: 100%;
-  }
 
   .ticketingError {
     margin: 0;
