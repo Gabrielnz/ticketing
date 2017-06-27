@@ -329,6 +329,90 @@ span.switch-inactive {
     font-size: 18px;
   }
 
+  .addEvent-content-bannerDescription {
+    font-size: 14px;
+  }
+
+  .addEvent-content-formRequired {
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .addEvent-content-formContainer {
+    flex-direction: column;
+  }
+
+  .addEvent-content-form-left {
+    margin-right: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+  }
+
+  .addEvent-content-formContainer input {
+    height: 30px;
+  }
+
+  .addEvent-content-formContainer input,
+  .addEvent-content-formContainer textarea {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .addEvent-content-form-inputDescription h3,
+  .addEvent-content-form-smallInputDescription h3 {
+    font-size: 25px;
+  }
+
+  .addEvent-content-form-inputDescription span {
+    font-size: 10px;
+  }
+
+  .addEvent-content-formContainer input.small-input.date-input {
+    width: 35vw;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .addEvent-content-formContainer span.date-input-label {
+    border-radius: 0 5px 5px 0;
+    margin-right: 5vw;
+  }
+
+  .addEvent-content-form-right {
+    margin-left: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+  }
+
+  .description-textarea-header {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  textarea.description-textarea {
+    border-radius: 0 0 10px 10px;
+  }
+
+  input.events-social-input {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .social-form div.input-group span {
+    border-radius: 5px 0 0 5px;
+    font-size: 100%;
+  }
+
+  .addEvent-content-form-switchContainer {
+    flex-direction: column;
+  }
+
+  .addEvent-content-form-saveContainer button {
+    font-size: 30px;
+    width: 200px;
+    height: 50px;
+  }
+
   /*.mobile-responsive-placeholder {
     display: flex;
   }*/
