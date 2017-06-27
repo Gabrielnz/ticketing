@@ -84,7 +84,7 @@
 .addEvent-content-banner span {
   position: absolute;
   z-index: 1;
-  font-size: 50px;
+  font-size: 40px;
   color: #606060;
 }
 
@@ -133,7 +133,6 @@
 
 .addEvent-content-form-inputDescription {
   display: flex;
-  width: 501px;
   align-items: baseline;
   justify-content: space-between;
 }
