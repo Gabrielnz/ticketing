@@ -133,7 +133,58 @@ a.ticketingContent-events-addEvent {
 
 /*Para móviles*/
 @media screen and (max-width: 39.9375em) {
+
   .ticketingContent-events {
+    min-height: inherit;
+  }
+
+  .ticketingContent-events-header {
+    margin: 0;
     display: none;
+  }
+
+  .ticketingContent-events-cardContainer {
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .ticketingContent-events-card {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 375px;
+    margin: 2%;
+    box-shadow: 4px 0px 5px 0px #bababa;
+  }
+
+  .ticketingContent-events-card-status-font i {
+    font-size: 30px;
+  }
+
+  .ticketingContent-events-card-data {
+    height: 100%;
+  }
+
+  .ticketingContent-events-card-title,
+  .ticketingContent-events-card-date,
+  .ticketingContent-events-card-seats {
+    font-size: 14px;
+  }
+
+  .ticketingContent-events-card-amount {
+    font-size: 25px;
+  }
+
+  .ticketingContent-events-card-status {
+    width: auto;
+    height: 20%;
+    font-size: 18px;
+  }
+
+  .mobile-responsive-placeholder {
+    display: flex;
   }
 }
