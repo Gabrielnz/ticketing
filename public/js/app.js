@@ -1,34 +1,27 @@
 $(document).foundation()
 
-/* function toggleContent(contentId) {
-  // Esconde todos los elementos con la clase content
-  const content = document.querySelectorAll('.content')
-  
-  content.forEach((content) => {
-    content.style.display = 'none'
-  })
+var query = window.matchMedia('(max-width: 39.9375em)')
+var menu = document.getElementById("offCanvas-menu")
 
-  // Muestra el contenido deseado
-  document.getElementById(contentId).style.display = 'block'
+function showMenu() {
+  menu.classList.add("offCanvas-active");
 }
 
-// Funcion que es invocada al seleccionar una opcion de la pagina principal
-function openOption(ev, contentId) {
-
-  toggleContent(contentId)
-
-  // Quita la clase activa del tab que la tenga
-  const tablinks = document.querySelectorAll('.tablinks')
-  
-  tablinks.forEach((tab) => {
-    tab.className = tab.className.replace(' active', '')
-  })
-
-  // Agrega la clase activa al tab que corresponde
-  ev.currentTarget.className += ' active'
+function hideMenu() {
+  menu.classList.remove("offCanvas-active");
 }
 
-// Funcion que es invocada al seleccionar la opcion de agregar evento
-function addEvent(ev, contentId) {
-  toggleContent(contentId)
-}*/
+function mediaQuery() {
+  if (query.matches) {
+    // si se cumple el media query
+    // gestos touch
+    var body = document.body
+    var gestures = new Hammer(body)
+
+    gestures.on('swipeleft', hideMenu)
+    gestures.on('swiperight', showMenu)
+  }
+}
+
+query.addListener(mediaQuery)
+mediaQuery()

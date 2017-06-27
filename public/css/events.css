@@ -130,3 +130,10 @@ a.ticketingContent-events-addEvent {
   background-color: #333333;
   color: white;
 }
+
+/*Para móviles*/
+@media screen and (max-width: 39.9375em) {
+  .ticketingContent-events {
+    display: none;
+  }
+}

@@ -54,23 +54,32 @@
   position: absolute;
   right: 4%;
   padding-left: 2%;
+  height: auto
 }
 
-div.tab a.active {
+div.ticketingHeader-options a.active {
   border-bottom: 5px solid white;
   margin-bottom: -5px;
+}
+
+/*Menú off-canvas*/
+div.ticketingHeader-options-offCanvas {
+  display: none;
 }
 
 /*Para móviles*/
 @media screen and (max-width: 39.9375em) {
   
   .ticketingHeader {
-    height: 70px;
+    height: 10%;
     font-size: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
   }
 
   .ticketingHeader-adminBox {
-    width: 70%;
+    width: 45%;
   }
 
   .ticketingHeader-adminBox-avatar {
@@ -87,13 +96,49 @@ div.tab a.active {
   }
 
   .ticketingHeader-options {
-    width: 100%;
+    display: none;
   }
 
-  .ticketingHeader-options-dashboard,
-  .ticketingHeader-options-events,
-  .ticketingHeader-options-payment,
-  .ticketingHeader-options-logout {
-    display: none;
+  div.ticketingHeader-options-offCanvas {
+    display: flex;
+    position: fixed;
+    top: 10%;
+    background: #606060;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    z-index: 2;
+    padding-top: 5%;
+    transition: 0.3s;
+    left: -100%;
+  }
+
+  div.offCanvas-active {
+    left: 0;
+  }
+
+  div.ticketingHeader-options-offCanvas a {
+    color: white;
+    text-decoration: none;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+  }
+
+  div.ticketingHeader-options-offCanvas a .offCanvas-icon {
+    width: 20%;
+    font-size: 25px;
+  }
+
+  div.ticketingHeader-options-offCanvas a span.fa-stack {
+    margin-left: -3%;
+  }
+
+  i.fa.fa-usd.fa-stack-1x {
+    color: #606060;
+  }
+
+  div.ticketingHeader-options-offCanvas a.active {
+    background-color: #333333;
   }
 }

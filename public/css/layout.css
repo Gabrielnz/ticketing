@@ -25,6 +25,7 @@ hr {
   justify-content: center;
   flex-direction: column;
   display: none;
+  padding-top: 25%;
 }
 
 .mobile-responsive-placeholder i {
