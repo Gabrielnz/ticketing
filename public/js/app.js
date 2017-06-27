@@ -1,6 +1,6 @@
 $(document).foundation()
 
-var query = window.matchMedia('(max-width: 39.9375em)')
+var query = window.matchMedia('(max-width: 650px)')
 var menu = document.getElementById("offCanvas-menu")
 
 function showMenu() {

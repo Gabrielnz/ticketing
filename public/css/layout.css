@@ -40,8 +40,8 @@ hr {
 }
 
 /*Para móviles*/
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 650px) {
   html, body {
-    /*height: 100%;*/
+    height: 100%;
   }
 }

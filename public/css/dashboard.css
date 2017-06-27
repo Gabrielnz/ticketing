@@ -119,7 +119,7 @@
 }
 
 /*Para móviles*/
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 650px) {
   
   div.ticketingContent-dashboard.content {
     display: none;

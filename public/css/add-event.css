@@ -306,13 +306,31 @@ span.switch-inactive {
 }
 
 /*Para móviles*/
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 650px) {
 
-  .ticketingContent-events-addEvent {
+  .addEvent-header {
     display: none;
   }
 
-  .mobile-responsive-placeholder {
-    display: flex;
+  .addEvent-content {
+    margin-top: 10vh;
   }
+
+  .addEvent-content-banner {
+    width: 90%;
+    height: 245px;
+    text-align: center;
+  }
+
+  .addEvent-content-banner i {
+    font-size: 150px;
+  }
+
+  .addEvent-content-banner span {
+    font-size: 18px;
+  }
+
+  /*.mobile-responsive-placeholder {
+    display: flex;
+  }*/
 }

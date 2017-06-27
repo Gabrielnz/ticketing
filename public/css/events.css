@@ -132,7 +132,7 @@ a.ticketingContent-events-addEvent {
 }
 
 /*Para móviles*/
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 650px) {
 
   .ticketingContent-events {
     min-height: inherit;
@@ -171,17 +171,17 @@ a.ticketingContent-events-addEvent {
   .ticketingContent-events-card-title,
   .ticketingContent-events-card-date,
   .ticketingContent-events-card-seats {
-    font-size: 14px;
+    font-size: 0.8em;
   }
 
   .ticketingContent-events-card-amount {
-    font-size: 25px;
+    font-size: 1.3em;
   }
 
   .ticketingContent-events-card-status {
     width: auto;
     height: 20%;
-    font-size: 18px;
+    font-size: 1.2em;
   }
 
   .mobile-responsive-placeholder {
