@@ -9,24 +9,26 @@ block content
   
   include ../header-menu.pug
 
-  include header-menu.pug
+  div(class='ticketingContent-events-addEvent')
+    
+    include header-menu.pug
 
-  div(class='addEvent-content')
-    div(class='addEvent-content-banner')
-      i(class='fa fa-picture-o fa-inverse' aria-hidden='true')
-      span
-        b Haga "click" aquí para añadir una imagen
-    span(class='addEvent-content-bannerDescription')
-      | (Tamaño banner 1101px X 529px)
+    div(class='addEvent-content')
+      div(class='addEvent-content-banner')
+        i(class='fa fa-picture-o fa-inverse' aria-hidden='true')
+        span
+          b Haga "click" aquí para añadir una imagen
+      span(class='addEvent-content-bannerDescription')
+        | (Tamaño banner 1101px X 529px)
 
-  hr
+    hr
 
-  div(class='addEvent-content-formRequired')
-    | Todos los campos marcados con
-    span(class='asterisk') &nbsp;*&nbsp;
-    | son obligatorios
+    div(class='addEvent-content-formRequired')
+      | Todos los campos marcados con
+      span(class='asterisk') &nbsp;*&nbsp;
+      | son obligatorios
 
-  div(class='addEvent-content-formContainer')
+    div(class='addEvent-content-formContainer')
       div(class='addEvent-content-form-left')
         div(class='addEvent-content-form-inputDescription')
           h3
@@ -90,10 +92,11 @@ block content
         div(class='description-textarea-header')
         textarea(class='description-textarea' maxlength='1300')
 
-  hr
-  div(class='addEvent-content-formContainer social-form')
-    div(class='addEvent-content-form-left')
-        
+    hr
+
+    div(class='addEvent-content-formContainer social-form')
+      div(class='addEvent-content-form-left')
+          
         div(class='addEvent-content-form-inputDescription')
           h3
             b Email
@@ -111,34 +114,37 @@ block content
           input(class='input-group-field events-social-input' type='text')
 
     div(class='addEvent-content-form-right')
-        
-        div(class='addEvent-content-form-inputDescription')
-          h3
-            b Instagram
-        div(class='input-group')
-          span(class='input-group-label label-instagram')
-            i(class='fa fa-instagram fa-inverse' aria-hidden='true')
-          input(class='input-group-field events-social-input' type='text')
 
-        div(class='addEvent-content-form-inputDescription')
-          h3
-            b Twitter
-        div(class='input-group')
-          span(class='input-group-label label-twitter')
-            i(class='fa fa-twitter fa-inverse' aria-hidden='true')
-          input(class='input-group-field events-social-input' type='text')
+      div(class='addEvent-content-form-inputDescription')
+        h3
+          b Instagram
+      div(class='input-group')
+        span(class='input-group-label label-instagram')
+          i(class='fa fa-instagram fa-inverse' aria-hidden='true')
+        input(class='input-group-field events-social-input' type='text')
 
-  div(class='addEvent-content-form-switchContainer')
-    span(class='switchDescription') ¿Desea mostrar este evento en plataforma?
-    | &nbsp; &nbsp;
-    div(class='switch medium')
-      input(id='yes-no' class='switch-input' type='checkbox', name='formSwitch')
-      label(class='switch-paddle' for='yes-no')
-        span(class='switch-active' aria-hidden='true') Sí
-        span(class='switch-inactive' aria-hidden='true') No
+      div(class='addEvent-content-form-inputDescription')
+        h3
+          b Twitter
+      div(class='input-group')
+        span(class='input-group-label label-twitter')
+          i(class='fa fa-twitter fa-inverse' aria-hidden='true')
+        input(class='input-group-field events-social-input' type='text')
 
-  div(class='addEvent-content-form-saveContainer')
-    button(class='addEvent-form-saveButton')
-      span
-        b Guardar
+    div(class='addEvent-content-form-switchContainer')
+      span(class='switchDescription') ¿Desea mostrar este evento en plataforma?
+      | &nbsp; &nbsp;
+      div(class='switch medium')
+        input(id='yes-no' class='switch-input' type='checkbox', name='formSwitch')
+        label(class='switch-paddle' for='yes-no')
+          span(class='switch-active' aria-hidden='true') Sí
+          span(class='switch-inactive' aria-hidden='true') No
+
+    div(class='addEvent-content-form-saveContainer')
+      button(class='addEvent-form-saveButton')
+        span
+          b Guardar
+
+  include ../mobile-placeholder.pug
+
   include ../footer.pug

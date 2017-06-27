@@ -304,3 +304,15 @@ span.switch-inactive {
   cursor: pointer;
   font-size: 37px;
 }
+
+/*Para móviles*/
+@media screen and (max-width: 39.9375em) {
+
+  .ticketingContent-events-addEvent {
+    display: none;
+  }
+
+  .mobile-responsive-placeholder {
+    display: flex;
+  }
+}
