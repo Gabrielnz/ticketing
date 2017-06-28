@@ -425,8 +425,9 @@ span.switch-inactive {
   }
 
   .addEvent-content-form-saveContainer button {
-    font-size: 30px;
-    width: 200px;
     height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 175px;
   }
 }
