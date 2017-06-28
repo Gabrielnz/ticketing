@@ -25,81 +25,37 @@ block content
     hr
 
     div(class='ticketingContent-events-cardContainer')
-      div(class='ticketingContent-events-card')
-        img(class='ticketingContent-events-card-image' src='/images/event-image.png')
-        div(class='ticketingContent-events-card-data')
-          div(class='ticketingContent-events-card-status-font')
-            i(class='fa fa-eye fa-lg' aria-hidden='true')
-          span(class='ticketingContent-events-card-title')
-            b 43820482390489023389 0284908 402398490
-          span(class='ticketingContent-events-card-date')
-            i(class='fa fa-calendar fa-lg' aria-hidden='true')
-            | &nbsp; &nbsp; 27/06/17
-          span(class='ticketingContent-events-card-seats')
-            i(class='fa fa-ticket fa-lg' aria-hidden='true')
-            | &nbsp; 100/500
-          div(class='ticketingContent-events-card-amount')
-            span
-              b 150.000 MXN
-          div(class='ticketingContent-events-card-status status-inProgress')
-            span
-              b EN CURSO
-      div(class='ticketingContent-events-card')
-        img(class='ticketingContent-events-card-image' src='/images/event-image.png')
-        div(class='ticketingContent-events-card-data')
-          div(class='ticketingContent-events-card-status-font')
-            i(class='fa fa-eye-slash fa-lg' aria-hidden='true')
-          span(class='ticketingContent-events-card-title')
-            b 43820482390489023389 0284908 402398490
-          span(class='ticketingContent-events-card-date')
-            i(class='fa fa-calendar fa-lg' aria-hidden='true')
-            | &nbsp; &nbsp; 27/06/17
-          span(class='ticketingContent-events-card-seats')
-            i(class='fa fa-ticket fa-lg' aria-hidden='true')
-            | &nbsp; 100/500
-          div(class='ticketingContent-events-card-amount')
-            span
-              b 150.000 MXN
-          div(class='ticketingContent-events-card-status status-inProgress')
-            span
-              b EN CURSO
-      div(class='ticketingContent-events-card')
-        img(class='ticketingContent-events-card-image' src='/images/event-image.png')
-        div(class='ticketingContent-events-card-data')
-          div(class='ticketingContent-events-card-status-font')
-            i(class='fa fa-eye fa-lg' aria-hidden='true')
-          span(class='ticketingContent-events-card-title')
-            b 43820482390489023389 0284908 402398490
-          span(class='ticketingContent-events-card-date')
-            i(class='fa fa-calendar fa-lg' aria-hidden='true')
-            | &nbsp; &nbsp; 27/06/17
-          span(class='ticketingContent-events-card-seats')
-            i(class='fa fa-ticket fa-lg' aria-hidden='true')
-            | &nbsp; 100/500
-          div(class='ticketingContent-events-card-amount')
-            span
-              b 150.000 MXN
-          div(class='ticketingContent-events-card-status status-done')
-            span
-              b REALIZADO
-      div(class='ticketingContent-events-card')
-        img(class='ticketingContent-events-card-image' src='/images/event-image.png')
-        div(class='ticketingContent-events-card-data')
-          div(class='ticketingContent-events-card-status-font')
-            i(class='fa fa-eye-slash fa-lg' aria-hidden='true')
-          span(class='ticketingContent-events-card-title')
-            b 43820482390489023389 0284908 402398490
-          span(class='ticketingContent-events-card-date')
-            i(class='fa fa-calendar fa-lg' aria-hidden='true')
-            | &nbsp; &nbsp; 27/06/17
-          span(class='ticketingContent-events-card-seats')
-            i(class='fa fa-ticket fa-lg' aria-hidden='true')
-            | &nbsp; 100/500
-          div(class='ticketingContent-events-card-amount')
-            span
-              b 150.000 MXN
-          div(class='ticketingContent-events-card-status status-done')
-            span
-              b REALIZADO
+
+      - var show_class = ''
+      - var status_class = ''
+      - var status_text = ''
+
+      each event in events
+        - event.show === true ? show_class = 'fa fa-eye fa-lg' : show_class = 'fa fa-eye-slash fa-lg'
+
+        div(class='ticketingContent-events-card')
+          img(class='ticketingContent-events-card-image' src='/images/event-image.png')
+          div(class='ticketingContent-events-card-data')
+            div(class='ticketingContent-events-card-status-font')
+              i(class= show_class, aria-hidden='true')
+            span(class='ticketingContent-events-card-title')
+              b= event.name
+            span(class='ticketingContent-events-card-date')
+              i(class='fa fa-calendar fa-lg' aria-hidden='true') &nbsp; &nbsp;
+              = event.date
+            span(class='ticketingContent-events-card-seats')
+              i(class='fa fa-ticket fa-lg' aria-hidden='true') &nbsp; &nbsp;
+              = event.seats
+            div(class='ticketingContent-events-card-amount')
+              span
+                b= event.amount + ' MXN'
+            if event.status === 'done'
+              div(class='ticketingContent-events-card-status status-done')
+                span
+                  b REALIZADO
+            else
+              div(class='ticketingContent-events-card-status status-inProgress')
+                span
+                  b EN CURSO
 
   include footer.pug

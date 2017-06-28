@@ -1,5 +1,6 @@
 extends layout
 
+
 block styles
   link(rel='stylesheet' href='/css/header-menu.css')
   link(rel='stylesheet' href='/css/dashboard.css')
@@ -8,6 +9,11 @@ block styles
 block content
   
   include header-menu.pug
+
+  - var sold_tickets = cards.sold_tickets
+  - var raised_money = cards.raised_money
+  - var events_held = cards.events_held
+  - var sold_tickets_percentage = cards.sold_tickets_percentage
     
   div(id='dashboard' class='ticketingContent-dashboard content')
     div(class='ticketingContent-dashboard-header')
@@ -22,28 +28,29 @@ block content
           label(class='ticketingContent-card-data')
             b Boletos vendidos
           label(class='ticketingContent-card-dataNumber')
-            b 300
+            b #{sold_tickets}
       div(class='ticketingContent-card raised-money-card')
         i(class='fa fa-usd fa-lg' aria-hidden='true')
         div(class='ticketingContent-card-dataContainer')
           label(class='ticketingContent-card-data')
             b Dinero recaudado
           label(class='ticketingContent-card-dataNumber')
-            b 600.000 MXN
+            b #{raised_money} MXN
       div(class='ticketingContent-card events-held-card')
         i(class='fa fa-calendar fa-lg' aria-hidden='true')
         div(class='ticketingContent-card-dataContainer')
           label(class='ticketingContent-card-data')
             b Eventos realizados
           label(class='ticketingContent-card-dataNumber')
-            b 5
+            b #{events_held}
       div(class='ticketingContent-card sold-tickets-percentage-card')
         i(class='fa fa-percent fa-lg' aria-hidden='true')
         div(class='ticketingContent-card-dataContainer')
           label(class='ticketingContent-card-data')
             b % boletos vendidos
           label(class='ticketingContent-card-dataNumber')
-            b 75%
+            b #{sold_tickets_percentage} %
+
 
     div(class='ticketingContent-dashboard-boxContainer')
       div(class='ticketingContent-dashboard-box')
@@ -59,42 +66,15 @@ block content
                 th(class='dashboard-table-total-header') Total boletos
                 th(class='dashboard-table-amount-header') Dinero recaudado
             tbody
-              tr
-                td(class='dashboard-table-eventTitle')
-                  b 438204823904890238903890284908402398490
-                td(class='dashboard-table-date') 27/06/17
-                td(class='dashboard-table-total') 100/500
-                td(class='dashboard-table-amount')
-                  b 150.000 MXN
-              tr
-                td(class='dashboard-table-eventTitle')
-                  b 438204823904890238903890284908402398490
-                td(class='dashboard-table-date') 27/06/17
-                td(class='dashboard-table-total') 100/500
-                td(class='dashboard-table-amount')
-                  b 150.000 MXN
-              tr
-                td(class='dashboard-table-eventTitle')
-                  b 438204823904890238903890284908402398490
-                td(class='dashboard-table-date') 27/06/17
-                td(class='dashboard-table-total') 100/500
-                td(class='dashboard-table-amount')
-                  b 150.000 MXN
-              tr
-                td(class='dashboard-table-eventTitle')
-                  b 438204823904890238903890284908402398490
-                td(class='dashboard-table-date') 27/06/17
-                td(class='dashboard-table-total') 100/500
-                td(class='dashboard-table-amount')
-                  b 150.000 MXN
-              tr
-                td(class='dashboard-table-eventTitle')
-                  b 438204823904890238903890284908402398490
-                td(class='dashboard-table-date') 27/06/17
-                td(class='dashboard-table-total') 100/500
-                td(class='dashboard-table-amount')
-                  b 150.000 MXN
-  
+              each event in active_events
+                tr
+                  td(class='dashboard-table-eventTitle')
+                    b= event.name
+                  td(class='dashboard-table-date')= event.date
+                  td(class='dashboard-table-total')= event.total
+                  td(class='dashboard-table-amount')
+                    b= event.amount + ' MXN'
+
   include mobile-placeholder.pug
 
   include footer.pug
