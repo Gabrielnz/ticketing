@@ -381,7 +381,7 @@ span.switch-inactive {
     font-size: 25px;
   }
 
-  .addEvent-content-form-inputDescription span {
+  .addEvent-content-form-inputDescription span:not(.asterisk) {
     font-size: 10px;
   }
 
