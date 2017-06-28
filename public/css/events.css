@@ -141,7 +141,7 @@ a.ticketingContent-events-addEvent {
   .ticketingContent-events-header {
     margin: 0;
     position: relative;
-    padding-top: 33%;
+    padding-top: 20vh;
     justify-content: flex-end;
   }
 

@@ -308,11 +308,28 @@ span.switch-inactive {
 @media screen and (max-width: 650px) {
 
   .addEvent-header {
+    padding-top: 15vh;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .addEvent-header-goBack {
+    height: auto;
+    padding-bottom: 3%;
+  }
+
+  .addEvent-header-goBack a {
+    border-radius: 5px;
+    font-size: 18px;
+    width: 135px;
+  }
+
+  .addEvent-header-options {
     display: none;
   }
 
   .addEvent-content {
-    margin-top: 10vh;
+    margin-top: 3%;
   }
 
   .addEvent-content-banner {
@@ -412,8 +429,4 @@ span.switch-inactive {
     width: 200px;
     height: 50px;
   }
-
-  /*.mobile-responsive-placeholder {
-    display: flex;
-  }*/
 }
